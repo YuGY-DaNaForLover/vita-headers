@@ -18,6 +18,7 @@ except KeyError:
     token = None
 
 def fetch_last_release(branch='master', os='linux'):
+    print(os)
     req = urllib2.Request(GITHUB_REL)
     if token:
         req.add_header('Authorization', 'Bearer ' + token);
